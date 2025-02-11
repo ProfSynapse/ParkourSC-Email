@@ -251,6 +251,7 @@ export const emailTemplates: EmailTemplate[] = [
                         <li><strong>Release Version:</strong> RT{version}</li>
                         <li><strong>Planned Deployment Date:</strong> {deploymentDate}</li>
                         <li><strong>Environment:</strong> UAT</li>
+                        <li><strong>Expected Downtime:</strong> {downtimeStart} to {downtimeEnd}</li>
                     </ul>
                 </div>
 
@@ -297,6 +298,18 @@ export const emailTemplates: EmailTemplate[] = [
                 key: 'deploymentDate',
                 type: 'text',
                 placeholder: 'e.g., Jan 30, 2024 (10:00 AM PST)'
+            },
+            {
+                name: 'Downtime Start',
+                key: 'downtimeStart',
+                type: 'text',
+                placeholder: 'e.g., 10:00 AM PST'
+            },
+            {
+                name: 'Downtime End',
+                key: 'downtimeEnd',
+                type: 'text',
+                placeholder: 'e.g., 12:00 PM PST'
             },
             {
                 name: 'New Features',
@@ -348,7 +361,7 @@ export const emailTemplates: EmailTemplate[] = [
                     <div class="section-content">
                         <h3>Upcoming Production Deployment</h3>
                         <p><strong>{prodDeploymentDate}</strong></p>
-                        <p>Change Window: <strong>{changeWindowStart}</strong> to <strong>{changeWindowEnd}</strong></p>
+                        <p>Expected Downtime: <strong>{downtimeStart}</strong> to <strong>{downtimeEnd}</strong></p>
                         <p class="warning">Please note, during the maintenance window, the <em><strong>Production</strong></em> environment will be inaccessible, and all API calls should be paused. All operations can be resumed immediately after the maintenance window.</p>
                     </div>
                 </div>
@@ -393,14 +406,14 @@ export const emailTemplates: EmailTemplate[] = [
                 placeholder: 'e.g., MMM DD, YYYY (HH:MM PM PST)'
             },
             {
-                name: 'Change Window Start',
-                key: 'changeWindowStart',
+                name: 'Downtime Start',
+                key: 'downtimeStart',
                 type: 'text',
                 placeholder: 'e.g., HH:MM PM PST'
             },
             {
-                name: 'Change Window End',
-                key: 'changeWindowEnd',
+                name: 'Downtime End',
+                key: 'downtimeEnd',
                 type: 'text',
                 placeholder: 'e.g., HH:MM PM PST'
             },
@@ -455,6 +468,7 @@ export const emailTemplates: EmailTemplate[] = [
                         <li><strong>Release Version:</strong> RT{version}</li>
                         <li><strong>Start Time:</strong> {startTime}</li>
                         <li><strong>Expected Duration:</strong> {duration}</li>
+                        <li><strong>Expected Downtime:</strong> {downtimeStart} to {downtimeEnd}</li>
                     </ul>
                 </div>
 
@@ -511,6 +525,18 @@ export const emailTemplates: EmailTemplate[] = [
                 placeholder: 'e.g., 2 hours'
             },
             {
+                name: 'Downtime Start',
+                key: 'downtimeStart',
+                type: 'text',
+                placeholder: 'e.g., HH:MM PM PST'
+            },
+            {
+                name: 'Downtime End',
+                key: 'downtimeEnd',
+                type: 'text',
+                placeholder: 'e.g., HH:MM PM PST'
+            },
+            {
                 name: 'New Features',
                 key: 'newFeatures',
                 type: 'richtext',
@@ -560,6 +586,7 @@ export const emailTemplates: EmailTemplate[] = [
                         <li><strong>Release Version:</strong> RT{version}</li>
                         <li><strong>Deployment Completed:</strong> {completionTime}</li>
                         <li><strong>Environment:</strong> Production</li>
+                        <li><strong>Total Downtime:</strong> {downtimeStart} to {downtimeEnd}</li>
                     </ul>
                 </div>
 
@@ -605,6 +632,18 @@ export const emailTemplates: EmailTemplate[] = [
             {
                 name: 'Completion Time',
                 key: 'completionTime',
+                type: 'text',
+                placeholder: 'e.g., HH:MM PM PST'
+            },
+            {
+                name: 'Downtime Start',
+                key: 'downtimeStart',
+                type: 'text',
+                placeholder: 'e.g., HH:MM PM PST'
+            },
+            {
+                name: 'Downtime End',
+                key: 'downtimeEnd',
                 type: 'text',
                 placeholder: 'e.g., HH:MM PM PST'
             },
