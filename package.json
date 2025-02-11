@@ -1,8 +1,9 @@
 {
-  "dependencies": {
-    "@inquirer/prompts": "^7.2.0",
-    "axios": "^1.7.9",
-    "dotenv": "^16.4.7",
-    "minimatch": "^10.0.1"
+  "name": "email-gen2",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build",
+    "start": "cd frontend && npm install && npm run preview"
   }
 }

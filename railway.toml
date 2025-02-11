@@ -1,0 +1,8 @@
+[build]
+builder = "nixpacks"
+buildCommand = "npm install && npm run build"
+
+[deploy]
+startCommand = "cd frontend && npx serve -s dist"
+healthcheckPath = "/"
+restartPolicyType = "ON_FAILURE"
