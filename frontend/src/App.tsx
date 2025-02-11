@@ -11,7 +11,6 @@ import {
 } from '@mui/material';
 import { TemplateSelector } from './components/TemplateSelector';
 import { TemplateForm } from './components/TemplateForm';
-import { EmailPreview } from './components/EmailPreview';
 import { emailTemplates } from './data/emailTemplates';
 import { EmailTemplate } from './types/email';
 
@@ -61,11 +60,9 @@ const theme = createTheme({
 
 function App() {
   const [selectedTemplate, setSelectedTemplate] = useState<EmailTemplate | null>(null);
-  const [emailContent, setEmailContent] = useState<string>('');
 
   const handleTemplateSelect = (template: EmailTemplate) => {
     setSelectedTemplate(template);
-    setEmailContent(template.template);
   };
 
   return (
@@ -94,7 +91,7 @@ function App() {
           {selectedTemplate && (
             <TemplateForm
               template={selectedTemplate}
-              onUpdateContent={setEmailContent}
+              onUpdateContent={() => { }}
             />
           )}
         </Container>
