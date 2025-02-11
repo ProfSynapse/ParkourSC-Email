@@ -1,13 +1,11 @@
 import { Box, Button, Paper, Typography, useTheme } from '@mui/material';
-import { EmailTemplate } from '../types/email';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 interface EmailPreviewProps {
-    template: EmailTemplate;
     content: string;
 }
 
-export const EmailPreview = ({ template, content }: EmailPreviewProps) => {
+export const EmailPreview = ({ content }: EmailPreviewProps) => {
     const theme = useTheme();
 
     const handleCopyHtml = () => {

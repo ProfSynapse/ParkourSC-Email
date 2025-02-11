@@ -242,7 +242,7 @@ export const TemplateForm = ({ template, onUpdateContent }: TemplateFormProps) =
                         backgroundColor: 'background.paper'
                     }}
                 >
-                    <EmailPreview template={template} content={previewContent} />
+                    <EmailPreview content={previewContent} />
                 </Paper>
             </Stack>
         </Container>
